@@ -1,0 +1,18 @@
+{{!-- this works like a loop --}}
+{{!-- {{#each values}}
+<h1>{{@index}}. {{this}}</h1>
+{{/each}} --}}
+
+<h1>{{person.comments.comment}}</h1>
+<h2>{{person.comments.date}}</h2>
+{{#if person.admin}}
+<h2>This is admin user</h2>
+{{else}}
+<h2>This is normal user</h2>
+{{/if}}
+
+{{#with person}}
+    {{#with comments}}
+        <h5>Display using with: {{comment}}</h5>
+    {{/with}}
+{{/with}}
